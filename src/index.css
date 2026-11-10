@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: #f5f7fa;
+  --color-panel: #ffffff;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-line: #e2e8f0;
+  --color-line-strong: #cbd5e1;
+  --color-accent: #0f766e;
+  --color-accent-soft: #ccfbf1;
+  --color-accent-hover: #0d9488;
+  --color-danger: #be123c;
+  --color-danger-soft: #ffe4e6;
+  --color-focus: #14b8a6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.08), transparent 28%),
+    linear-gradient(180deg, #f8fafc 0%, var(--color-surface) 45%, #eef2f7 100%);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
